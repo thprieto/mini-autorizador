@@ -8,6 +8,9 @@ Projeto desenvolvido de acordo com o desafio proposto abaixo, utilizando:
 # Swagger
 http://localhost:8080/swagger-ui.html#/
 
+# Github
+https://github.com/thprieto/mini-autorizador
+
 
 # Teste de programação - VR Benefícios
 
