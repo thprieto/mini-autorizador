@@ -1,3 +1,14 @@
+#MINI-AUTORIZADOR
+Projeto desenvolvido de acordo com o desafio proposto abaixo, utilizando:
+Java 11
+Spring Boot
+Docker
+MySQL
+
+#Swagger
+http://localhost:8080/swagger-ui.html#/
+
+
 #Teste de programação - VR Benefícios
 
 Como parte do processo de seleção, gostaríamos que você desenvolvesse um pequeno sistema, para que possamos ver melhor o seu trabalho.

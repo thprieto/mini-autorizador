@@ -2,11 +2,10 @@ package br.com.vr.application.service;
 
 import java.util.Optional;
 
-import javax.transaction.Transactional;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import br.com.vr.application.domain.dto.CartaoDTO;
 import br.com.vr.application.domain.dto.StatusDTO;
@@ -39,14 +38,17 @@ public class CartaoServiceImpl implements CartaoService {
     }
 
 	@Override
+	@Transactional
 	public StatusDTO subtrairSaldo(TransacaoDTO transacaoDTO) {
 
 		ValidacaoDTO validacaoDTO = validarTransacao( transacaoDTO );
 		
 		if ( Constants.HTTP_STATUS_OK.equals( validacaoDTO.getStatus().getMensagem() ) ) {
+			
 			Cartao cartao = new Cartao( validacaoDTO.getCartao() );
 			cartao.setSaldo(cartao.getSaldo().subtract(transacaoDTO.getValorTransacao()));
 			cartaoRepository.save(cartao);
+			
 		}
 		
 		return validacaoDTO.getStatus();
