@@ -1,0 +1,8 @@
+CREATE DATABASE `miniautorizador`;
+
+CREATE TABLE `cartao` (
+  `numero_cartao` varchar(16) NOT NULL,
+  `senha` varchar(8) NOT NULL,
+  `saldo` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`numero_cartao`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
