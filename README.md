@@ -1,9 +1,9 @@
 # MINI AUTORIZADOR
 Projeto desenvolvido de acordo com o desafio proposto abaixo, utilizando:
-Java 11
-Spring Boot
-Docker
-MySQL
+* Java 11
+* Spring Boot
+* Docker
+* MySQL
 
 # Swagger
 http://localhost:8080/swagger-ui.html#/
